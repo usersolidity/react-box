@@ -16,7 +16,8 @@ const MyButton = styled(Button)({
   padding: '0 30px',
 });
 
-
+//https://web3js.readthedocs.io/en/v1.2.11/web3.html
+       
 
 class App extends Component {
   state = { storageValue: 0, web3: null, accounts: null, contract: null };
@@ -74,10 +75,14 @@ class App extends Component {
         <h2>Smart Contract Example</h2>
         Version:
         <small>{this.state.web3.version}</small>
+        Provider: 
+        <small>{this.state.contract.address}</small>
         <p>
           If your contracts compiled and migrated successfully, below will show
           a stored value of 5 (by default).
-        </p>
+        </p>Default Block: 
+        <small>{this.state.contract.defaultBlock}</small>
+       
         <p>
           Try changing the value stored on <strong>line 40</strong> of App.js.
         </p>
